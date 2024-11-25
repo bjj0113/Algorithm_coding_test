@@ -1,6 +1,6 @@
 def sol(n):
     for x in range(n):
-        ret = sum(int(digit) for digit in str(x))
+        ret = sum(map(int,str(x)))
         if n == x + ret:
             return x
     
