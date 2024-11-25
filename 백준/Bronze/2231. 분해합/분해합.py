@@ -1,9 +1,8 @@
 def sol(n):
-    num = list(map(int,str(n)))
-    numlen = len(num)
- 
-    for x in range(10**numlen):
-        if n == x + sum(list(map(int,str(x)))):
+    numlen = len(str(n))
+    for x in range(n):
+        ret = sum(int(digit) for digit in str(x))
+        if n == x + ret:
             return x
     
     return 0
